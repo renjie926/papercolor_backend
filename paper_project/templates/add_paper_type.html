@@ -1,0 +1,19 @@
+<!-- paper_app/templates/add_paper_type.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加论文类型</title>
+</head>
+<body>
+    <h1>添加论文类型</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">添加</button>
+    </form>
+    <br>
+    <a href="{% url 'admin:index' %}">返回管理界面</a>
+</body>
+</html>

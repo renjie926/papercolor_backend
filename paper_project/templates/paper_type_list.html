@@ -1,0 +1,6 @@
+<h1>论文类型列表</h1>
+<ul>
+    {% for paper_type in paper_types %}
+        <li><a href="{% url 'paper_type_detail' paper_type.pk %}">{{ paper_type.name }}</a></li>
+    {% endfor %}
+</ul>
