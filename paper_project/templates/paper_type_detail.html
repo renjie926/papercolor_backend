@@ -1,0 +1,8 @@
+<h1>{{ paper_type.name }}</h1>
+<ul>
+    {% for entry in paper_type.entries.all %}
+        <li>{{ entry.name }}</li>
+        <img src="{{ entry.image.url }}" alt="{{ entry.name }}" width="300" />
+    {% endfor %}
+</ul>
+<a href="{% url 'paper_type_list' %}">返回</a>
